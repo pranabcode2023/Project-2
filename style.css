@@ -1,0 +1,27 @@
+
+
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+  }
+
+  
+  /* #searchresult {
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid black;
+  } */
+
+  body {
+    background-image: url('background_img.jpg.');
+    background-repeat: no-repeat;
+  }
