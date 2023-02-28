@@ -104,7 +104,7 @@ function addMealToDOM(meal){
 submit.addEventListener("submit", searchMeal);
 mealEl.addEventListener("click",e =>{
     const mealInfo = e.path.find(item => {
-        if (item.classlist){
+          if (item.classlist){
             return item.classlist.contains("meal-info");
         }else{
             return false;
@@ -117,3 +117,8 @@ mealEl.addEventListener("click",e =>{
     }
 
 });
+
+
+
+// image gallery
+
