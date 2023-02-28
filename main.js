@@ -1,5 +1,6 @@
 const search = document.getElementById("search");
 const submit = document.getElementById("submit");
+const refresh = document.getElementById("refresh");
 const mealEl = document.getElementById("meals");
 const resultHeading = document.getElementsByClassName("result-heading");
 const single_mealEl = document.getElementById("single-meal");
@@ -116,4 +117,3 @@ mealEl.addEventListener("click",e =>{
     }
 
 });
-

@@ -1,180 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href ="style.css">
 </head>
+<body>
 
-  <body>
-    <h1>API project</h1>
 
-     
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Recipie</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="firstPage.html">Image Gallary</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="firstPage.html">Action</a></li>
-              <li><a class="dropdown-item" href="secondPage.html">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-         </ul>
-        <form class="d-flex" role="search">
-          <input id="user-input" type="text" placeholder="Search Recipie" aria-label="Search">
-          <button id ="search-btn" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
+  <div class="sidebar">
+    <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="firstPage.html"><i class="fa fa-cutlery"></i> Services</a>
+    <a href="secondPage.html"><i class="fa fa-fw fa-user"></i> Clients</a>
+    <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  </div>
   
 
-    <div class="container-fluid">
-      <div class="jumbotron">
-        <h1>Image Gallary</h1>
-        <p></p>
-      </div>
-      
-      <div class="row gallery">
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/1548772327.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/1548772327.jpg">
-            <p>Baked salmon with fennel & tomatoes</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/uvuyxu1503067369.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/uvuyxu1503067369.jpg">
-            <p>Cajun spiced fish tacos</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/1520084413.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/1520084413.jpg">
-            <p>Escovitch Fish</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg">
-            <p>Fish fofos</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg">
-            <p>Fish pie</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/vptqpw1511798500.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/vptqpw1511798500.jpg">
-            <p>Fish Stew with Rouille</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/wuvryu1468232995.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/wuvryu1468232995.jpg">
-            <p>Garides Saganaki</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/lpd4wy1614347943.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/lpd4wy1614347943.jpg">
-            <p>Grilled Portuguese sardines</p>
-          </a>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/xxyupu1468262513.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/xxyupu1468262513.jpg">
-            <p>Honey Teriyaki Salmon</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/utxqpt1511639216.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/utxqpt1511639216.jpg">
-            <p>Kedgeree</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/1525873040.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/1525873040.jpg">
-            <p>Kung Po Prawns</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/rvypwy1503069308.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/rvypwy1503069308.jpg">
-            <p>Laksa King Prawn Noodles</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/wvqpwt1468339226.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/wvqpwt1468339226.jpg">
-            <p>Mediterranean Pasta Salad</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/xquakq1619787532.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/xquakq1619787532.jpg">
-            <p>Mee goreng mamak</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/wai9bw1619788844.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/wai9bw1619788844.jpg">
-            <p>Nasi lemak</p>
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <a href="https://www.themealdb.com/images/media/meals/do7zps1614349775.jpg">
-            <img class="img-fluid"src="https://www.themealdb.com/images/media/meals/do7zps1614349775.jpg">
-            <p>Portuguese fish stew (Caldeirada de peixe)</p>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    
-    
   <div class="footer">
-    <p>
-      <button type="button" class="btn">Basic</button>
-      <button type="button" class="btn btn-primary">Primary</button>
-      <button type="button" class="btn btn-secondary">Secondary</button>
-      <button type="button" class="btn btn-success">Success</button>
-      <button type="button" class="btn btn-info">Info</button>
-      <button type="button" class="btn btn-warning">Warning</button>
-      <button type="button" class="btn btn-danger">Danger</button>
-      <button type="button" class="btn btn-dark">Dark</button>
-      <button type="button" class="btn btn-light">Light</button>
-      <button type="button" class="btn btn-link">Link</button>
-    </p>
-    </div>
-    
-    <script src="data.js"></script>  
-    <script src="main.js"></script>
-   
+      <p>
+       <button type="button" class="btn"><a href="https://github.com/pranabcode2023"><i class="fa fa-github"></i></a></button>
+       <button type="button" class="btn btn-primary"><a href="#"><i class="fa fa-twitter"></i></a></button>
+       <button type="button" class="btn btn-secondary"> <a href="#"><i class="fa fa-linkedin"></i></a></button>
+       <button type="button" class="btn btn-success"><a href="#"><i class="fa fa-facebook"></i></a></button>
+      </p>
+   </div>    
+
+
+
+<script src="main.js"></script>
 </body>
 </html>
