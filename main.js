@@ -1,124 +1,99 @@
-const search = document.getElementById("search");
-const submit = document.getElementById("submit");
-const refresh = document.getElementById("refresh");
-const mealEl = document.getElementById("meals");
-const resultHeading = document.getElementsByClassName("result-heading");
-const single_mealEl = document.getElementById("single-meal");
+// intial reference
 
-// search recipe
-
-function searchMeal(e){
-    e.preventDefault();
+let result = document.getElementById("result");
+let searchBtn = document.getElementById("search-btn");
+let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
 
-    // clear single-meal
-    single_mealEl.innerHTML="";
 
-
-    // search recipe
-
-    const term = search.value;
-
-    // check for empty
-
-    if (term.trim()){
-       fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
-       .then(res => res.json())
-       .then(data => {
+searchBtn.addEventListener("click",()=>{
+    let userInp = document.getElementById
+    ("user-inp").value;
+    if(userInp.length ===0){
+        result.innerHTML =`<h3>Please enter recipe name</h3>`;
+    }else{
+        fetch(url + userInp)
+        .then((response) => response.json())
+        .then((data) => {
             console.log(data);
-            resultHeading.innerHTML =`<h2> Search Results for ${term}`;
-            if (data.meals === null){
-                resultHeading.innerHTML=`<h2>No results found for ${term}`;
-            }else{
-                mealEl.innerHTML= data.meals.map(
-                    meal => `
-                    <div class="meal">
-                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-                    <div class="meal-info" data-mealID="${meal.idMeal}">
-                    <h3>${meal.strMeal}</h3>
-                    <div/>
-                    </div>
-                    `
-                )
-                .join("");
+            let myMeal= data.meals[0];
+            console.log(myMeal);
+            console.log(myMeal.strMealThumb);
+            console.log(myMeal.strMeal);
+            console.log(myMeal.strArea);
+            console.log(myMeal.strInstructions);
+            let count = 1;
+            let ingredients =[];
+        
+            for (let i in myMeal) {
+                let ingredient ="";
+                let measure = "";
+        
+                if (i.startsWith ("strIngredient") && myMeal[i]
+                ){
+                    ingredient = myMeal[i];
+                    measure = myMeal[`strMeasure` + count];
+                    count += 1;
+                    ingredients.push(`${measure} ${ingredient}
+                    `);
+                }
+        
             }
-       });
-       }else{
-        alert("Please enter a recipe name");
-       }
-
-    }
-
-// fetch meal by id
- function  getMealById(mealID) {
-    fetch 
-    (`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-       const meal =data.meals[0];
-       addMealToDOM (meal);
-    });
- }
-
-
-
-//  add meal to DOM
-
-function addMealToDOM(meal){
-    const ingredients = [];
-    for (let i=0 ; i<=20; i++){
-        if (meal[`strIngredient${i}`]){
-            ingredients.push(`${meal[`strIngredient${i}`]}
-            -
-            ${meal[`strMeasure${i}`]}
+        
+            console.log (ingredients);
             
-            `);
-        }else{
-            break;
-        }
+            result.innerHTML = `
+            <img src= ${myMeal.strMealThumb}>
+            <div class="details">
+               <h2>${myMeal.strMeal}</h2>
+               <h4>${myMeal.strArea}</h4>
+            </div>
+            <div id="ingredient-con"></div>
+            <div id="recipe">
+               <button id="hide-recipe">x</button>
+               <pre id="instructions">${myMeal.strInstructions}</pre>
+            </div>
+            <button id="show-recipe">Read more</button>
+            `;
+        
+            let ingredientCon = document.getElementById("ingredient-con");
+            let parent = document.createElement("ul");
+            let recipe = document.getElementById("recipe");
+            let hideRecipe = document.getElementById("hide-recipe");
+            let showRecipe = document.getElementById("show-recipe");
+            
+            ingredients.forEach((i) =>{
+                let child =document.createElement("li");
+                child.innerText = i;
+                parent.appendChild(child);
+                ingredientCon.appendChild(parent);
+            });
+        
+            hideRecipe.addEventListener ("click", () =>{
+                recipe.style.display = "none";
+            });
+        
+            showRecipe.addEventListener ("click", () =>{
+                recipe.style.display = "block";
+            });
+        
+        }) .catch(() =>{
+            result.innerHTML =`<h3>Not found</h3>`;
+        });
+        
     }
-    single_mealEl.innerHTML = `
-    <div class="single-meal">
-        <h1>${meal.strMeal}</h1>
-        <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-        <div class="single-meal-info">
-        ${meal.strCategory ? `<p>${meal.strCategory}</p>`:""}
-        ${meal.strArea ? `<p>${meal.strArea}</p>`:""}
-    <div/>
-    <div class = "main">
-    <p>${meal.setInstructions}</p>
-    <h2>Ingredients</h2>
-    <ul>
-    ${ingredients.map(ing => `<li>${ing}</li>`).join("")}
-    </ul>
-    </div>
-    </div>
-    `
-}
-
-
-
-// EventListener
-
-submit.addEventListener("submit", searchMeal);
-mealEl.addEventListener("click",e =>{
-    const mealInfo = e.path.find(item => {
-          if (item.classlist){
-            return item.classlist.contains("meal-info");
-        }else{
-            return false;
-        }
-    });
-
-    if (mealInfo){
-        const mealID = mealInfo.getAttribute("data-mealid");
-        getMealById(mealID);
-    }
-
 });
 
 
 
-// image gallery
+
+
+
+
+
+
+
+
+
+
 
