@@ -5,20 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe API</title>
-    <link rel="stylesheet" href ="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href ="table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
 
-  <div class="pill-nav">
-    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-    <a href="firstPage.html"><i class="fa fa-image"></i></i>Image Gallery</a>
-    <a href="secondPage.html"><i class="fa  fa-table"></i>Table</a>
-    <a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+<div class="pill-nav">
+  <a class="active" href="index.html">Home</a>
+  <a href="firstPage.html">Image Gallery</a>
+  <a href="secondPage.html">Table</a>
+  <a href="contact.html">Contact</a>
+</div>
+  
+  
+
+<div class="test-div">
+  <button>HTML button</button>
+  <button id="bs-butt" type="button" class="btn btn-primary">Bootstrap button</button>
+  <input />
+</div>
+<div class="table">
+<h1>Recipe Table</h1>
+<table class="table table-striped table-hover">
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Id</th>
+      <th>Image</th>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+<div class="container-md">
+  <div id="cards-div" class="row">
+
+  <!-- <div class="table">
+      <h1>Recipe Table</h1>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Id</th>
+          <th>Image</th>
+        </tr>
+      </table>
+      <table id="example"></table>
   </div>
-
-
-
+  -->
+  
   <div class="footer">
       <p>©2023 Recipe API.All Rights Reserved</p>
       <p>
@@ -31,7 +69,16 @@
 
 
   
-   <script src="main.js"></script>
-   <script src="secret.js"></script>
+  
+  
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script src="data.js"></script>
+  <script src="table.js"></script>
+  <script src="secret.js"></script>
+  
+
 </body>
 </html>

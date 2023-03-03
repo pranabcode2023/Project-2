@@ -16,7 +16,7 @@
 }
 
 .pill-nav a.active {
-  background-color: ;
+  background-color: #0b5252;
   color: white;
 }
 
@@ -35,10 +35,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1{
+  color:#ddd
+}
+
 
 body{
   background-color: rgb(153, 69, 69);
- }
+}
 
  
 
@@ -187,3 +191,5 @@ h3{
    }
    
 
+
+  
