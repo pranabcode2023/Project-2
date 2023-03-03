@@ -1,50 +1,35 @@
-/* Style the sidebar - fixed full height */
-.sidebar {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #0b5252;
-  overflow-x: hidden;
-  padding-top: 16px;
-}
+/*  navbar */
 
-/* Style sidebar links */
-.sidebar a {
-  padding: 30px 8px 6px 16px;
+.pill-nav a {
+  display: inline-block;
+  color:white;
+  text-align: center;
+  padding: 14px;
   text-decoration: none;
-  font-size: 20px;
-  color: #fefcfc;
-  display: block;
+  font-size: 17px;
+  border-radius: 5px;
 }
 
-/* Style links on mouse-over */
-.sidebar a:hover {
-  color: rgb(43, 132, 117);
+.pill-nav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-/* Style the main content */
-.main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  padding: 0px 10px;
-}
-
-/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+.pill-nav a.active {
+  background-color: ;
+  color: white;
 }
 
 
 
-/* side navbar */
 
 
+
+
+/* serch for recipe */
 
 * {
-  padding: 0;
+  padding: 0.1rem;
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -55,6 +40,8 @@ body{
   background-color: rgb(153, 69, 69);
  }
 
+ 
+
 .container{
   background-color: bisque;
   font-size: 16px;
@@ -64,7 +51,7 @@ body{
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  top: 1em;
+  top: 0.8em;
   border-radius: 0.6em;
   box-shadow: 0 1.2em 2.5em #0b5252;
 }
@@ -194,69 +181,9 @@ h3{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #0b5252;
+    background-color: #153d3d;
     color: white;
     text-align: center;
    }
    
 
-
-
-
-   /* image gallary */
-
-   main {
-    padding: 0 0.5rem;
-    height: 100vh;
-  }
-
-
-  .image--gallery {
-    width: 100%;
-    height: 32rem;
-    display: block;
-    margin: auto;
-    border: 5px solid #222;
-    object-fit: cover;
-  }
-  
-  .image--selection {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image__item {
-    width: 100%;
-    height: 8rem;
-    display: block;
-    margin: auto;
-    margin-bottom: 0.5rem;
-    border: 5px solid #222;
-    object-fit: cover;
-    cursor: pointer;
-  }
-
-  .loader {
-    text-align: center;
-    margin-top: 20%;
-    color: #fff;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-  }
-  
-  .animate-entrance {
-    animation: BounceIn 0.8s;
-  }
-  
-  @keyframes BounceIn {
-    0% {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }

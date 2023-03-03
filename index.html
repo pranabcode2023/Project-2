@@ -11,20 +11,22 @@
 </head>
 <body>
 
-  <div class="sidebar">
-    <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="firstPage.html"><i class="fa fa-cutlery"></i> Services</a>
-    <a href="secondPage.html"><i class="fa fa-fw fa-user"></i> Clients</a>
-    <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  <div class="pill-nav">
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="firstPage.html"><i class="fa fa-image"></i></i>Image Gallery</a>
+    <a href="secondPage.html"><i class="fa  fa-table"></i>Table</a>
+    <a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
   </div>
+
   
   <div class="container">
+    <h1>Welcome to Recipe API</h1>
       <div class="serch-container">
         <input 
             type="text"  
             placeholder="Search for a recipe"
             id="user-inp"
-            />
+            >
         <button id="search-btn">Search</button>
       </div>
       <div id="result"></div>
