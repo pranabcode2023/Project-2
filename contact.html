@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe API</title>
     <link rel="stylesheet" href ="style.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -16,6 +17,26 @@
     <a href="table.html">Table</a>
     <a href="contact.html">Contact</a>
 </div>
+
+
+
+<button id="open-btn" onclick="openForm()">Contact Us</button>
+
+<div id="myForm" class="popup-container">
+    <form action="/submit-form">
+        <h2>Enter your details</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+        <button id="submit-btn" type="submit">Submit</button>
+        <button id="close-btn" type="button" onclick="closeForm()">Close</button>
+    </form>
+</div>
+
+
 
 
  
@@ -35,8 +56,8 @@
     </p>
 </div>
 
-  
-   <script src="main.js"></script>
+   <script src="data.js"></script>
+   <script src="contact.js"></script>
    <script src="secret.js"></script>
 
 </body>

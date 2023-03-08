@@ -22,10 +22,6 @@
 
 
 
-
-
-
-
 /* serch for recipe */
 
 * {
@@ -35,15 +31,22 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1{
-  color:#ddd
-}
-
 
 body{
   background-color: rgb(153, 69, 69);
 }
 
+
+h1 {
+  color: #ddd
+}
+
+
+h3 {
+  text-align: center;
+  margin-top: 1.8em;
+  color: black;
+}
  
 
 .container{
@@ -163,13 +166,9 @@ ul{
   padding: 1.2em 0 0 1.2em;
 }
 
-h3{
-  text-align: center;
-  margin-top: 1.8em;
-  color: black;
-}
 
-@media screen and (max-width: 500px){
+
+@media screen and (max-width: 600px){
   .container {
     font-size: 14px;
   }

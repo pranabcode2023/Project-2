@@ -1,0 +1,61 @@
+/* Popup container */
+.popup-container {
+    background-color: bisque;
+    font-size: 16px;
+    padding: 3em 3em;
+    width: 100vw;
+    max-width: 50em;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 8em;
+    border-radius: 0.6em;
+    box-shadow: 0 1.2em 2.5em #0b5252;
+}
+
+/* Full-width input fields */
+
+.popup-container input[type=text],
+.popup-container input[type=email],
+.popup-container textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+/* Button used to open the popup form */
+#submit-btn, #open-btn {
+    background-color: #153d3d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#open-btn{
+    display: block;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 20px
+}
+
+#close-btn {
+    background-color: rgb(153, 69, 69);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Center the form on small screens */
+
+@media screen and (max-width: 600px) {
+.popup-container {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    }
+}
