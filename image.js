@@ -27,7 +27,8 @@ const showImages = () => {
   const createImageGallery = images => {
     let output = ""
     // Show the first image on the viewer
-    image_gallery.innerHTML = `<img src="${images[0].urls.regular}" class="animate-entrance image--gallery" alt="${images[0].alt_description}">`
+    image_gallery.innerHTML = `<img src="${images[0].urls.regular}" 
+          class="animate-entrance image--gallery" alt="${images[0].alt_description}">`
     setTimeout(() => {
       image_gallery.children[0].classList.remove("animate-entrance")
     }, 500)
@@ -52,6 +53,8 @@ const showImages = () => {
       }, 800)
     }
   }
+  
+  
   
   // Event listeners
   document.addEventListener("DOMContentLoaded", showImages)
