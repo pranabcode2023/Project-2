@@ -34,71 +34,61 @@ body{
   background-color: rgb(153, 69, 69);
 }
 
-
-
-
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #ddd;
+  background-color: #0b5252;
+  border: 1px solid #ddd;
+  box-shadow: 0 1.2em 2.5em #0b5252;
+}
 
 /* image gallary */
 
-main {
-    padding: 5rem 0.5rem;
-    height: 100vh;
-    
-  }
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  max-width: 1200px;
+  /* set a maximum width for the container */
+  margin: 0 auto;
+  /* center the container horizontally */
+}
+
+.gallery-item {
+  margin: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1.2em 2.5em #0b5252;
+  border-radius: 5px;
+  overflow: hidden;
+  width: calc(25% - 40px);
+  /* set the width of each item to 25% of the container minus margins */
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 
-  .image--gallery {
-    width: 80%;
-    height: 32rem;
-    display: block;
-    margin: auto;
-    border: 5px solid #222;
-    object-fit: cover;
-  }
-  
-  .image--selection {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(9rem, 2fr));
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image__item {
-    width: 100%;
-    height: 8rem;
-    display: block;
-    margin: auto;
-    margin-bottom: 0.5rem;
-    border: 5px solid #222;
-    object-fit: cover;
-    cursor: pointer;
-  }
 
-  .loader {
-    text-align: center;
-    margin-top: 20%;
-    color: #fff;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-  }
-  
-  .animate-entrance {
-    animation: BounceIn 0.8s;
-  }
-  
-  @keyframes BounceIn {
-    0% {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-
-  /* Footer */
+ /* Footer */
  
 .footer {
   position: fixed;
