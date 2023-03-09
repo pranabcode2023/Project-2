@@ -58,7 +58,7 @@ h3 {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  top: 0.5em;
+  top: 0.8em;
   border-radius: 0.6em;
   box-shadow: 0 1.2em 2.5em #0b5252;
 }
@@ -166,6 +166,31 @@ ul{
   padding: 1.2em 0 0 1.2em;
 }
 
+
+.serch-container button:hover{
+  background-color: rgb(153, 69, 69);
+}
+
+
+#show-recipe:hover{
+  background-color: rgb(153, 69, 69);
+}
+
+#hide-recipe:hover{
+  background-color: rgb(153, 69, 69);
+}
+
+.serch-container input:hover{
+  background-color: burlywood;
+}
+
+.container:hover{
+  background-color: burlywood;
+}
+
+#recipe:hover{
+  background-color: burlywood;
+}
 
 
 @media screen and (max-width: 600px){

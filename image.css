@@ -87,8 +87,17 @@ h1 {
 }
 
 
+.gallery-item:hover{
+  background-color: bisque;
+}
 
- /* Footer */
+.gallery-item h2:hover{
+  background-color: #0b5252;
+}
+
+
+
+/* Footer */
  
 .footer {
   position: fixed;
