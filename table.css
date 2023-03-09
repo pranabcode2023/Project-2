@@ -78,7 +78,6 @@
  
   /* table  */
   
-    
   table {
     border-collapse: collapse;
     width: 100%;
@@ -93,7 +92,7 @@
   
   table thead tr{
     background-color: #0b5252;
-    color: #ffffff;
+    color: black;
     text-align: left;
   }
 
@@ -103,8 +102,22 @@
     padding: 12px 15px;
     border: solid 2px black;
   }
+  
+ tr:nth-child(even) {
+    background-color: burlywood;
+  }
+  
+ tr:hover {
+    background-color: #ddd;
+  }
+    
+ table img {
+   height: 3em;
+   width: auto;
+ }
+    
    
-   /* th, td {
+    /* th, td {
     padding: 0.3em 2em;
     border: solid 1px black;
     min-height: 2em;
@@ -126,11 +139,7 @@
     } */
 
    
-  table img {
-    height: 3em;
-    width: auto;
-  } 
-
+  
 
 
 

@@ -4,7 +4,7 @@ fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
 	.then(response => response.json())
 	.then(data => {
 		data.meals.forEach((meal, index) => {
-			if (index < 16) { // display only the first 16 meals
+			if (index < 28) {  // display only the first 28 meals
 				const galleryItem = document.createElement('div');
 				galleryItem.classList.add('gallery-item');
 

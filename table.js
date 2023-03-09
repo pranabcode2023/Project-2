@@ -1,34 +1,42 @@
+const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
-const tbody = document.querySelector("#table tbody");
-const searchButton = document.querySelector("#search-button");
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
+const tableBody = document.getElementById("table").getElementsByTagName("tbody")[0];
 
-// genarate table with data.js
-
-seafood.meals.forEach(meal => {
-  const tr = document.createElement("tr");
-  tr.innerHTML = `
-    <td>${meal.strMeal}</td>
-    <td>${meal.idMeal}</td>
-   <td><img src="${meal.strMealThumb}" alt="${meal.strMeal}"></td>
-  `;
-  tbody.appendChild(tr);
+searchButton.addEventListener("click", searchMeal);
+searchInput.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    searchMeal();
+  }
 });
 
-// Search functionality
-searchButton.addEventListener("click", () => {
-  const searchInput = document.querySelector("#search-input");
-  const filter = searchInput.value.toUpperCase();
-  const rows = tbody.querySelectorAll("tr");
-  
-  rows.forEach(row => {
-    const strMeal = row.querySelectorAll("td")[0].textContent.toUpperCase();
-    const idMeal = row.querySelectorAll("td")[1].textContent.toUpperCase();
-    
-    
-    if (strMeal.indexOf(filter) > -1 || idMeal.indexOf(filter) > -1) {
-      row.style.display = "";
-    } else {
-      row.style.display = "none";
-    }
-  });
-});
+function searchMeal() {
+  const searchText = searchInput.value.trim();
+  if (searchText === "") {
+    alert("Please enter a search term.");
+    return;
+  }
+
+  fetch(API_URL + searchText)
+    .then(response => response.json())
+    .then(data => {
+      tableBody.innerHTML = "";
+      if (data.meals === null) {
+        alert("No results found.");
+        return;
+      }
+
+      data.meals.forEach(meal => {
+        const row = tableBody.insertRow();
+        const nameCell = row.insertCell();
+        const idCell = row.insertCell();
+        const imageCell = row.insertCell();
+        nameCell.innerText = meal.strMeal;
+        idCell.innerText = meal.idMeal;
+        imageCell.innerHTML = `<img src="${meal.strMealThumb}" alt="${meal.strMeal}">`;
+      });
+    })
+    .catch(error => alert("Error fetching data."));
+}
