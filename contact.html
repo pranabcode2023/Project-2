@@ -23,14 +23,14 @@
 <button id="open-btn" onclick="openForm()">Contact Us</button>
 
 <div id="myForm" class="popup-container">
-    <form action="/submit-form">
+    <form action="/submit-form" onsubmit="return submitFunction()">
         <h2>Enter your details</h2>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea>
+        <textarea id="message" name="message" required></textarea>
         <button id="submit-btn" type="submit">Submit</button>
         <button id="close-btn" type="button" onclick="closeForm()">Close</button>
     </form>
@@ -39,8 +39,9 @@
 
 
 
- 
 
+ 
+<!-- 
 <div class="footer">
     <p>©2023 Recipe API.All Rights Reserved</p>
     <p>
@@ -54,7 +55,7 @@
         <button type="button" class="btn btn-success"><a href="https://www.facebook.com/prodyut2004"><i
                     class="fa fa-facebook"></i></a></button>
     </p>
-</div>
+</div> -->
 
    <script src="data.js"></script>
    <script src="contact.js"></script>

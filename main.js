@@ -7,9 +7,8 @@ let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
 
 searchBtn.addEventListener("click",()=>{
-    let userInp = document.getElementById
-    ("user-inp").value;
-    if(userInp.length ===0){
+    let userInp = document.getElementById("user-inp").value;
+    if(userInp.length === 0){
         result.innerHTML =`<h3>Please enter recipe name</h3>`;
     }else{
         fetch(url + userInp)
@@ -26,7 +25,7 @@ searchBtn.addEventListener("click",()=>{
             let ingredients =[];
         
             for (let i in myMeal) {
-                let ingredient ="";
+                let ingredient = "";
                 let measure = "";
         
                 if (i.startsWith ("strIngredient") && myMeal[i]
@@ -83,7 +82,6 @@ searchBtn.addEventListener("click",()=>{
         
     }
 });
-
 
 
 
