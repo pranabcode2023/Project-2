@@ -4,7 +4,10 @@ let result = document.getElementById("result");
 let searchBtn = document.getElementById("search-btn");
 let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
+//TODO create separete functions to : 1) fetch data, 2) gemerate table , 3) add the events listeners to the elements you want
 
+// TODO create a function to fetch the data from the api
+//inside that funcion, when you get the result, call your function to generate the table
 
 searchBtn.addEventListener("click",()=>{
     let userInp = document.getElementById("user-inp").value;

@@ -23,6 +23,7 @@ fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
 	})
 	.catch(error => console.error(error));
 
+console.log(galleryContainer);
 
 
 

@@ -23,7 +23,9 @@
 <button id="open-btn" onclick="openForm()">Contact Us</button>
 
 <div id="myForm" class="popup-container">
-    <form action="/submit-form" onsubmit="return submitFunction()">
+    <!-- <form action="/submit-form" onsubmit="return submitFunction()"> -->
+    <!-- <form action="./submitConfirmation.html" onsubmit="submitFunction()" id="contact-form"> -->
+    <form action="./submitConfirmation.html" id="contact-form">
         <h2>Enter your details</h2>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>

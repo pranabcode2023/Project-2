@@ -9,11 +9,22 @@ function closeForm() {
 }
 
 
+function addEvents() {
+  const contactForm = document.getElementById("contact-form");
+  contactForm.addEventListener("submit", () => {
+    submitFunction()
+  } )
+}
 
-function submitFunction() {
-  let name = document.form["myForm"]["name"].value;
-  let email = document.form["myForm"]["email"].value;
-  let message = document.form["myForm"]["message"].value;
+addEvents()
+function submitFunction(e) {
+  // e.preventDefault();
+  // window.open("./submitConfirmation.html", "_self");
+  console.log("submit ");
+  let name = document.forms["myForm"]["name"].value;
+  let email = document.forms["myForm"]["email"].value;
+  let message = document.forms["myForm"]["message"].value;
+
 
   if (name == "") {
     alert("Please enter your name");
@@ -33,3 +44,4 @@ function submitFunction() {
   alert("Thank you for your message.You will get replied shortly");
   return true;
 }
+
